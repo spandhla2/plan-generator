@@ -65,6 +65,7 @@ Conventions
 Testing
 -------------------------
 - unit tests
+- integration tests - e2e
 
 Logging
 ----------------------
