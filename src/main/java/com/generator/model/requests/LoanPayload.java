@@ -21,7 +21,7 @@ public class LoanPayload {
 
     @NotNull(message = "Duration is mandatory")
     @Min(value = 1, message = "Duration cannot be less than 1 month")
-    private Long duration;
+    private Integer duration;
 
     @NotNull(message = "Start date is mandatory")
     private LocalDateTime startDate;
@@ -46,12 +46,12 @@ public class LoanPayload {
         this.nominalRate = nominalRate;
     }
 
-    public Long getDuration()
+    public Integer getDuration()
     {
         return duration;
     }
 
-    public void setDuration(Long duration)
+    public void setDuration(Integer duration)
     {
         this.duration = duration;
     }
@@ -64,5 +64,15 @@ public class LoanPayload {
     public void setStartDate(LocalDateTime startDate)
     {
         this.startDate = startDate;
+    }
+
+    @Override
+    public String toString() {
+        return "LoanPayload{" +
+                "loanAmount=" + loanAmount +
+                ", nominalRate=" + nominalRate +
+                ", duration=" + duration +
+                ", startDate=" + startDate +
+                '}';
     }
 }

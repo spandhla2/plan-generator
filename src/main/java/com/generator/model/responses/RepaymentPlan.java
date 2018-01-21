@@ -45,4 +45,16 @@ public class RepaymentPlan {
     public BigDecimal getRemainingOutstandingPrincipal() {
         return remainingOutstandingPrincipal;
     }
+
+    @Override
+    public String toString() {
+        return "RepaymentPlan{" +
+                "borrowerPaymentAmount=" + borrowerPaymentAmount +
+                ", date=" + date +
+                ", initialOutstandingPrincipal=" + initialOutstandingPrincipal +
+                ", interest=" + interest +
+                ", principal=" + principal +
+                ", remainingOutstandingPrincipal=" + remainingOutstandingPrincipal +
+                '}';
+    }
 }
